@@ -152,9 +152,11 @@ class DamSequence {
 		if (this.advancedThisWave != 0) {
 			this.currentSequenceStep = this.currentSequenceStep - this.advancedThisWave;
 		}
-	}
 
-	// TODO: Flank spawns testen
+		if (this.abortedThisWave == true) {
+			this.abortedSequenceStep = -1;
+		}
+	}
 
 	function abortSequence() {
 		if (this.abortedSequenceStep != -1) {
