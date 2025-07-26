@@ -1,0 +1,48 @@
+name: Bundle and Release
+
+on:
+  push:
+    tags:
+      - "release-*"
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set version variable
+        id: vars
+        run: echo "VERSION=${GITHUB_REF_NAME#release-}" >> $GITHUB_ENV
+
+      - name: Create Release Bundle
+        run: |
+          # Copy the relevant files into a release folder
+          mkdir -p release/tf/maps
+          mkdir -p release/tf/scripts/population
+          cp -r tf/maps/* release/tf/maps
+          cp -r tf/scripts/population/* release/tf/scripts/population
+
+          # Rename the files to contain the versioning of the map
+          mv "release/tf/maps/mvm_ascent.bsp" "release/tf/maps/mvm_ascent_${VERSION}.bsp"
+          for f in release/tf/scripts/population/*.pop; do
+            base=$(basename "$f" .pop)
+            new_base="mvm_ascent_${VERSION}_${base#mvm_ascent_}"
+            mv "$f" "release/tf/scripts/population/${new_base}.pop"
+          done
+
+          # Generate the zip file
+          cd release
+          zip -r ../mvm_ascent_${{ env.VERSION }}.zip .
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Version ${{ env.VERSION }}
+          files: mvm_ascent_${{ env.VERSION }}.zip
+          body_path: changelog.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT  }}

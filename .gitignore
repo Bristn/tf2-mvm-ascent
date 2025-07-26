@@ -1,4 +1,5 @@
 /vpk
+/internal 
 
 # Temporary BSP files
 /*.unpacked
