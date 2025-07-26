@@ -1,1 +1,9 @@
 /vpk
+
+# Temporary BSP files
+/*.unpacked
+/*.backup
+/*.log
+/*.vmx
+/*.prt
+/*.bsp

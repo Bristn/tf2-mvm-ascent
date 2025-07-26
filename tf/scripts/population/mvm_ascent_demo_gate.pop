@@ -1,0 +1,195 @@
+#base robot_giant.pop
+#base robot_standard.pop
+#base robot_gatebot.pop
+population
+{
+	StartingCurrency	1000
+	RespawnWaveTime	6
+	CanBotsAttackWhileInSpawnRoom	no
+	AddSentryBusterWhenDamageDealtExceeds	5000
+	AddSentryBusterWhenKillCountExceeds	30
+	Wave
+	{
+		WaitWhenDone	65
+		Checkpoint	Yes
+		StartWaveOutput
+		{
+			Target	wave_start_relay
+			Action	Trigger
+		}
+		DoneOutput
+		{
+			Target	wave_finish_relay
+			Action	Trigger
+		}
+        InitWaveOutput
+		{
+			Target	relay_idle_sequence
+			Action	Trigger
+		}
+		WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot
+			TFBot
+			{
+					Name	Scout
+					Template	T_TFBot_Scout_Scattergun_SlowFire 
+			}
+		}
+        WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot_left
+			TFBot
+			{
+					Name	Soldier
+					Template	T_TFGateBot_Soldier_Normal
+			}
+		}
+        WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot_right
+			TFBot
+			{
+					Name	Heavy
+					Template	T_TFGateBot_Heavy_Normal
+			}
+		}
+        WaveSpawn
+		{
+			TotalCurrency	50
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	8
+			WaitBetweenSpawns	30
+			Where	spawnbot
+			Tank
+			{
+				Health 100					
+				speed 75								
+				Name "TankBoss"
+				StartingPathTrackNode "path_spawn"
+				OnKilledOutput                              
+				{
+					Target boss_dead_relay					
+					Action Trigger                
+				}
+				OnBombDroppedOutput                       
+				{
+					Target boss_deploy_relay 	
+					Action Trigger                  
+				}
+			}
+		}
+	}
+    Wave
+	{
+		WaitWhenDone	65
+		Checkpoint	Yes
+		StartWaveOutput
+		{
+			Target	wave_start_relay
+			Action	Trigger
+		}
+		DoneOutput
+		{
+			Target	wave_finish_relay
+			Action	Trigger
+		}
+        InitWaveOutput
+		{
+			Target	relay_idle_sequence
+			Action	Trigger
+		}
+		WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot
+			TFBot
+			{
+					Name	Scout
+					Template	T_TFBot_Scout_Scattergun_SlowFire
+			}
+		}
+        WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot_left
+			TFBot
+			{
+					Name	Soldier
+					Template	T_TFGateBot_Soldier_Normal
+			}
+		}
+        WaveSpawn
+		{
+ 			TotalCurrency	100
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	0
+			WaitBetweenSpawns	30
+			Where	spawnbot_right
+			TFBot
+			{
+					Name	Heavy
+					Template	T_TFGateBot_Heavy_Normal
+			}
+		}
+        WaveSpawn
+		{
+			TotalCurrency	50
+			TotalCount	2
+			MaxActive	2
+			SpawnCount	1
+			WaitBeforeStarting	8
+			WaitBetweenSpawns	35
+			Where	spawnbot
+			Tank
+			{
+				Health 100					
+				speed 75								
+				Name "TankBoss"
+				StartingPathTrackNode "path_spawn"
+				OnKilledOutput                              
+				{
+					Target boss_dead_relay					
+					Action Trigger                
+				}
+				OnBombDroppedOutput                       
+				{
+					Target boss_deploy_relay 	
+					Action Trigger                  
+				}
+			}
+		}
+	}
+}
