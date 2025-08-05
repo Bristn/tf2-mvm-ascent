@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/mvm_ascent/water/waterfall_color"
+	"$surfaceprop"	"water"
+	"$translucent" 1
+	"$model" "1"
+	"$nocull" "1"
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$basetexturetransform"
+			"texturescrollrate" -.8
+			"texturescrollangle" 90
+		}
+	}
+}

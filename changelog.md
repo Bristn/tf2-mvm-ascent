@@ -1,5 +1,3 @@
-# MVM Ascent a1
-
 ## Changelog
 
 Initial version

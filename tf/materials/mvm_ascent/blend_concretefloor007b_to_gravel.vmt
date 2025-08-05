@@ -1,0 +1,14 @@
+"WorldVertexTransition"
+{
+	"$basetexture2" "Nature/gravelgrayred001"
+	"$basetexture" "concrete/concretefloor007b"
+	"%tooltexture" "medieval/cobblestone006_tooltexture"
+	"$blendmodulatetexture" "Nature/dirtground002_blendmask"
+	"$bumpmap2" "Nature/dirtground002_height-ssbump"
+	"$bumpmap" "Concrete/concretefloor007b_height-ssbump"
+//	"%detailtype" "tf_forest_grass"
+	"$ssbump" "1"
+	"$surfaceprop" "dirt"
+	"%keywords" "tf,mvm_ascent"
+}
+ 
