@@ -1,6 +1,8 @@
 [h1] MVM Ascent [/h1]
 
-Download the map and pop files on [url=https://github.com/Bristn/tf2-mvm-ascent/releases] GitHub [/url]
+Download the map and pop files on [url=https://github.com/Bristn/tf2-mvm-ascent/releases]GitHub[/url].
+
+⚠️ The gifs are not always up-to-date and may show older map versions
 
 [h2] Sequence [/h2]
 
@@ -108,3 +110,27 @@ If the shortcut is enabled, bots and tanks are going to prioritize the shortcut 
 [td]Starts the map with the entire sequence already completed[/td]
 [/tr]
 [/table]
+
+[h2] Screenshots [/h2]
+
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_00.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_01.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_02.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_03.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_04.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_05.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_06.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_07.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_08.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_09.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_10.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_11.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_12.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_13.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_14.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_15.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_16.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_17.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_18.jpg[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/screenshots/mvm_ascent_position_19.jpg[/img]
+ 

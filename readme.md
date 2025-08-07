@@ -1,6 +1,8 @@
 # MVM Ascent
 
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3532548365)
+Checkout the map on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3532548365).
+
+⚠️ The gifs are not always up-to-date and may show older map versions
 
 ## Sequence
 
