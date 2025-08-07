@@ -1,6 +1,9 @@
 /vpk
 /internal 
 
+# Blend backup
+*.blend1
+
 # Temporary BSP files
 /*.unpacked
 /*.backup
