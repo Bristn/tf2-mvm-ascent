@@ -17,7 +17,7 @@ The gameplay of the map can be changed using the `InitWaveOutput` in the .pop fi
 
 As they use the `InitWaveOutput` Trigger, the actions are always executed before the wave. Defining `relay_advance_sequence_1` in the first wave will result in the first step being executed immediately after the map loads. Advancing the sequence triggers the steps one after another. The sequence consists of the following 5 steps.
 
-![](./doc/sequence_progress.gif)
+![](./doc/gifs/sequence_progress.gif)
 
 ### Step 1
 
@@ -27,34 +27,34 @@ No gameplay changes. The sequence sign changes to `In progress`
 
 No major gameplay changes. Outlet #1 is closed. The sequence signs are update accordingly.
 
-![](./doc/outlet_1.gif)
+![](./doc/gifs/outlet_1.gif)
 
 ### Step 3
 
 Outlet #2 is closed, resulting in the channel being drained of water. Bots may chose the now drained channel as a secondary path jumping down from the bridge. The water path has a higher chance to be chosen compared to the regular path. The signs are update accordingly.
 
-![](./doc/outlet_2.gif)
-![](./doc/water_1.gif)
-![](./doc/water_2.gif)
-![](./doc/water_3.gif)
+![](./doc/gifs/outlet_2.gif)
+![](./doc/gifs/water_1.gif)
+![](./doc/gifs/water_2.gif)
+![](./doc/gifs/water_3.gif)
 
 ### Step 4
 
 The lake is drained, removing the large death pit. Bots and tanks can chose the water path. The water path has a higher chance to be chosen compared to the regular path. The signs are update accordingly.
 
-![](./doc/lake.gif)
+![](./doc/gifs/lake.gif)
 
 ### Step 5
 
 Outlet #3 is closed, removing the death pit entirely. The signs are update accordingly.
 
-![](./doc/outlet_3.gif)
+![](./doc/gifs/outlet_3.gif)
 
 ### Aborting
 
 Aborting the sequence stops further steps from executing, effectively locking the current state for the remainder of the game. Aborting also opens the left spawn.
 
-![](./doc/abort_spawn.gif)
+![](./doc/gifs/abort_spawn.gif)
 
 ## Gatebots
 
@@ -62,7 +62,7 @@ Gatebots can capture a control point near the lift. Once captured, the lift is l
 
 If the shortcut is enabled, bots and tanks are going to prioritize the shortcut path. If the shortcut is disabled during a wave, the remaining bots will fallback to the path marked with white projectors.
 
-![](./doc/shortcut.gif)
+![](./doc/gifs/shortcut.gif)
 
 ## Demo .pop files
 
@@ -76,23 +76,23 @@ If the shortcut is enabled, bots and tanks are going to prioritize the shortcut 
 
 ## Screenshots
 
-![](./screenshots/mvm_ascent_position_00.jpg)
-![](./screenshots/mvm_ascent_position_01.jpg)
-![](./screenshots/mvm_ascent_position_02.jpg)
-![](./screenshots/mvm_ascent_position_03.jpg)
-![](./screenshots/mvm_ascent_position_04.jpg)
-![](./screenshots/mvm_ascent_position_05.jpg)
-![](./screenshots/mvm_ascent_position_06.jpg)
-![](./screenshots/mvm_ascent_position_07.jpg)
-![](./screenshots/mvm_ascent_position_08.jpg)
-![](./screenshots/mvm_ascent_position_09.jpg)
-![](./screenshots/mvm_ascent_position_10.jpg)
-![](./screenshots/mvm_ascent_position_11.jpg)
-![](./screenshots/mvm_ascent_position_12.jpg)
-![](./screenshots/mvm_ascent_position_13.jpg)
-![](./screenshots/mvm_ascent_position_14.jpg)
-![](./screenshots/mvm_ascent_position_15.jpg)
-![](./screenshots/mvm_ascent_position_16.jpg)
-![](./screenshots/mvm_ascent_position_17.jpg)
-![](./screenshots/mvm_ascent_position_18.jpg)
-![](./screenshots/mvm_ascent_position_19.jpg)
+![](./doc/screenshots/mvm_ascent_position_00.jpg)
+![](./doc/screenshots/mvm_ascent_position_01.jpg)
+![](./doc/screenshots/mvm_ascent_position_02.jpg)
+![](./doc/screenshots/mvm_ascent_position_03.jpg)
+![](./doc/screenshots/mvm_ascent_position_04.jpg)
+![](./doc/screenshots/mvm_ascent_position_05.jpg)
+![](./doc/screenshots/mvm_ascent_position_06.jpg)
+![](./doc/screenshots/mvm_ascent_position_07.jpg)
+![](./doc/screenshots/mvm_ascent_position_08.jpg)
+![](./doc/screenshots/mvm_ascent_position_09.jpg)
+![](./doc/screenshots/mvm_ascent_position_10.jpg)
+![](./doc/screenshots/mvm_ascent_position_11.jpg)
+![](./doc/screenshots/mvm_ascent_position_12.jpg)
+![](./doc/screenshots/mvm_ascent_position_13.jpg)
+![](./doc/screenshots/mvm_ascent_position_14.jpg)
+![](./doc/screenshots/mvm_ascent_position_15.jpg)
+![](./doc/screenshots/mvm_ascent_position_16.jpg)
+![](./doc/screenshots/mvm_ascent_position_17.jpg)
+![](./doc/screenshots/mvm_ascent_position_18.jpg)
+![](./doc/screenshots/mvm_ascent_position_19.jpg)
