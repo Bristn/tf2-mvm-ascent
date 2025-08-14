@@ -3,6 +3,7 @@
 
 # Blend backup
 *.blend1
+*.exr
 
 # Temporary BSP files
 /*.unpacked
