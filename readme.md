@@ -25,10 +25,6 @@ As they use the `InitWaveOutput` Trigger, the actions are always executed before
 
 The first step does not alter the layout of the map. The sequence sign is set to `In progress`
 
-![Step 2 Header](./doc/headers/renders/step_1.png)
-
-The first outlet of the upper dam is closed. This results in one of the water streams draining. This does not alter the layout massively, but allows players to use the third spawn exit without taking damage. The sign `Outlet 1` is set to active.
-
 ![Step 3 Header](./doc/headers/renders/step_2.png)
 
 The second outlet of the upper dam is closed. The entire water channel is drained. Bots may chose the channel as a secondary path jumping down from the bridge. The channel path has a higher chance to be chosen compared to the regular path, as it is shorter and more claustrophobic and thus harder to defend. The sign `Outlet 2` is set to active.

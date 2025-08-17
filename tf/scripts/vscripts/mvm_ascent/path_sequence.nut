@@ -4,10 +4,9 @@
 class DamSequence {
 	// Step indices
 	static STEP_NONE = 0
-	static STEP_OUTLET_A = 1
-	static STEP_OUTLET_B = 2
-	static STEP_DRAIN_LAKE = 3
-	static STEP_OUTLET_C = 4
+	static STEP_OUTLET_B = 1
+	static STEP_DRAIN_LAKE = 2
+	static STEP_OUTLET_C = 3
 
 	// Execution types
 	static TYPE_REGULAR = "regular";
@@ -25,7 +24,7 @@ class DamSequence {
 	static CHANCE_PATH_WATER = 70
 
 	// Instance members
-	maxSequenceSteps = 5;
+	maxSequenceSteps = 4;
 	currentSequenceStep = -1;
 	abortedSequenceStep = -1;
 
@@ -249,8 +248,6 @@ class DamSequence {
 	// ----- ----- ----- ----- -----
 	// Path logic
 	// ----- ----- ----- ----- -----
-
-	// TODO: Test (Funktioniert das Revergatebot mehrmals in einer Welle?)
 
 	/**
 	 * Called once the bots capture the point.

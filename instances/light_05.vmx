@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8870"
-	"mapversion" "4"
+	"mapversion" "5"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "4"
+	"mapversion" "5"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites_2fort"
 	"detailvbsp" "detail_2fort.vbsp"
@@ -142,7 +142,7 @@ entity
 	"_zero_percent_distance" "512"
 	"spawnflags" "0"
 	"style" "0"
-	"origin" "0 0 -32"
+	"origin" "0 0 -40"
 	editor
 	{
 		"color" "220 30 220"
