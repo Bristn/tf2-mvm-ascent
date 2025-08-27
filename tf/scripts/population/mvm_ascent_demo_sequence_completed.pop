@@ -24,7 +24,7 @@ population
 		}
         InitWaveOutput
 		{
-			Target	relay_advance_sequence_5_abort
+			Target	relay_advance_sequence_3_abort
 			Action	Trigger
 		}
 		WaveSpawn

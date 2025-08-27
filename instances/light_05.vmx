@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8870"
-	"mapversion" "5"
+	"mapversion" "7"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "5"
+	"mapversion" "7"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites_2fort"
 	"detailvbsp" "detail_2fort.vbsp"
@@ -116,7 +116,7 @@ entity
 	"model" "models/props_lights/hangingbulb.mdl"
 	"screenspacefade" "0"
 	"skin" "0"
-	"solid" "6"
+	"solid" "0"
 	"origin" "0 0 -14"
 	editor
 	{
@@ -132,17 +132,17 @@ entity
 	"classname" "light"
 	"_constant_attn" "0"
 	"_distance" "0"
-	"_fifty_percent_distance" "128"
+	"_fifty_percent_distance" "256"
 	"_hardfalloff" "0"
-	"_light" "252 254 158 150"
+	"_light" "252 254 158 175"
 	"_lightHDR" "-1 -1 -1 1"
 	"_lightscaleHDR" "1"
 	"_linear_attn" "0"
 	"_quadratic_attn" "1"
-	"_zero_percent_distance" "512"
+	"_zero_percent_distance" "768"
 	"spawnflags" "0"
 	"style" "0"
-	"origin" "0 0 -40"
+	"origin" "0 0 -48"
 	editor
 	{
 		"color" "220 30 220"

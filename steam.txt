@@ -1,10 +1,9 @@
-[h1] MVM Ascent [/h1]
+
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/download.png[/img]
 
 Download the map and pop files on [url=https://github.com/Bristn/tf2-mvm-ascent/releases]GitHub[/url].
 
-⚠️ The gifs are not always up-to-date and may show older map versions
-
-[h2] Sequence [/h2]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/sequence.png[/img]
 
 The gameplay of the map can be changed using the [b]InitWaveOutput[/b] in the .pop files. The table shows the different relays and their actions.
 
@@ -31,58 +30,33 @@ The gameplay of the map can be changed using the [b]InitWaveOutput[/b] in the .p
 [/tr]
 [/table]
 
-⚠️ If any [b]relay_advance_[/b] or [b]relay_abort_[/b] is used, [b]all[/b] waves must define a [b]InitWaveOutput[/b] action. If the sequence should not change use [b]relay_idle_sequence[/b]. This is required to properly reset the sequence.
+⚠️ If any [b]relay_advance_[/b] or [b]relay_abort_[/b] are used, [b]all[/b] waves must define a [b]InitWaveOutput[/b] action. If the sequence should not change use [b]relay_idle_sequence[/b].
 
-As they use the [b]InitWaveOutput[/b] Trigger, the actions are always executed before the wave. Defining [b]relay_advance_sequence_1[/b] in the first wave will result in the first step being executed immediately after the map loads. Advancing the sequence triggers the steps one after another. The sequence consists of the following 5 steps.
+Tthe actions are always executed before the wave. Defining [b]relay_advance_sequence_1[/b] in the first wave will result in the first step being executed immediately after the map loads. Advancing the sequence triggers the steps one after another. The sequence consists of the following 5 steps.
 
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/sequence_progress.gif[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/step_2.png[/img]
 
-[h3] Step 1 [/h3]
+The second outlet of the upper dam is closed. The entire water channel is drained. Bots may chose the channel as a secondary path jumping down from the bridge. The channel path has a higher chance to be chosen compared to the regular path, as it is shorter and harder to defend.
 
-No gameplay changes. The sequence sign changes to [b]In progress[/b]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/step_3.png[/img]
 
-[h3] Step 2 [/h3]
+All water is drained from the lake. The death pit remains, but bots are no longer sucked into the death pit. Bots and tanks can chose the channel path. Like before, the channel path has a higher chance to be chosen compared to the regular path.
 
-No major gameplay changes. Outlet #1 is closed. The sequence signs are update accordingly.
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/step_4.png[/img]
 
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/outlet_1.gif[/img]
+The outlet of the lower dam is closed. This removed the death pit completely.
 
-[h3] Step 3 [/h3]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/failure.png[/img]
 
-Outlet #2 is closed, resulting in the channel being drained of water. Bots may chose the now drained channel as a secondary path jumping down from the bridge. The water path has a higher chance to be chosen compared to the regular path. The signs are update accordingly.
+Aborting the sequence stops further steps from executing, locking the current state for the remainder of the game. Additionally a new bot spawn point is enabled, making the starter area harder to defend.
 
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/outlet_2.gif[/img]
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/water_1.gif[/img]
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/water_2.gif[/img]
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/water_3.gif[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/gatebots.png[/img]
 
-[h3] Step 4 [/h3]
+Gatebots can capture a control point near the lift. Once captured, the lift is lowered enabling a shortcut for bots and tanks. After a tank uses the lift, the shortcut is closed and the control point is reset.
 
-The lake is drained, removing the large death pit. Bots and tanks can chose the water path. The water path has a higher chance to be chosen compared to the regular path. The signs are update accordingly.
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/demo_files.png[/img]
 
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/lake.gif[/img]
-
-[h3] Step 5 [/h3]
-
-Outlet #3 is closed, removing the death pit entirely. The signs are update accordingly.
-
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/outlet_3.gif[/img]
-
-[h3] Aborting [/h3]
-
-Aborting the sequence stops further steps from executing, effectively locking the current state for the remainder of the game. Aborting also opens the left spawn.
-
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/abort_spawn.gif[/img]
-
-[h2] Gatebots [/h2]
-
-Gatebots can capture a control point near the lift. Once captured, the lift is lowered enabling a shortcut route for bots and tanks. Once a tank uses the lift, the shortcut is closed again and the control point is ready to be captured again.
-
-If the shortcut is enabled, bots and tanks are going to prioritize the shortcut path. If the shortcut is disabled during a wave, the remaining bots will fallback to the path marked with white projectors.
-
-[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/shortcut.gif[/img]
-
-[h2] Demo .pop files [/h2]
+As of now there is only a modified version of the advanced Mannhattan mission to show the different gimmicks of the map. Apart from this mission there are several demo files
 
 [table]
 [tr]
@@ -103,7 +77,7 @@ If the shortcut is enabled, bots and tanks are going to prioritize the shortcut 
 [/tr]
 [tr]
 [td]sequence_abort[/td]
-[td]Advances the sequence and aborts it after step #3 [/td]
+[td]Advances the sequence and aborts it after draining the lake [/td]
 [/tr]
 [tr]
 [td]sequence_completed[/td]

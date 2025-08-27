@@ -1,7 +1,7 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "8869"
+	"editorbuild" "8870"
 	"mapversion" "14"
 	"formatversion" "100"
 	"prefab" "0"
@@ -141,7 +141,7 @@ entity
 	"origin" "-0.493225 0 -64"
 	editor
 	{
-		"color" "0 242 247"
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -171,7 +171,7 @@ entity
 	"origin" "0 0 -0.845392"
 	editor
 	{
-		"color" "0 230 191"
+		"color" "255 255 0"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"

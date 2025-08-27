@@ -3,10 +3,9 @@
 
 class DamSequence {
 	// Step indices
-	static STEP_NONE = 0
-	static STEP_OUTLET_B = 1
-	static STEP_DRAIN_LAKE = 2
-	static STEP_OUTLET_C = 3
+	static STEP_OUTLET_B = 0
+	static STEP_DRAIN_LAKE = 1
+	static STEP_OUTLET_C = 2
 
 	// Execution types
 	static TYPE_REGULAR = "regular";
@@ -24,7 +23,7 @@ class DamSequence {
 	static CHANCE_PATH_WATER = 70
 
 	// Instance members
-	maxSequenceSteps = 4;
+	maxSequenceSteps = 3;
 	currentSequenceStep = -1;
 	abortedSequenceStep = -1;
 
@@ -45,7 +44,7 @@ class DamSequence {
 		// - Vote to change / restart properly resets
 
 		printl("----- Resetting sequence info")
-		this.maxSequenceSteps = 4
+		this.maxSequenceSteps = 3
 		this.currentSequenceStep = -1
 		this.abortedSequenceStep = -1
 
@@ -182,21 +181,43 @@ class DamSequence {
 
 		printl("----- Step Executions -----")
 
+		local hasRegularThisStep = false;
+		local isLakeOutletOpen = false;
 		for (local i = 0; i < executions.len(); i++) {
 			local element = executions[i];
 			local relayName = "relay_dam_sequence_" + element.type + "_" + element.step
 			this.triggerRelay(relayName)
+
+			if (element.type == this.TYPE_REGULAR) {
+				hasRegularThisStep = true;
+			}
+
+			// Keep track of if the lake outlet has been closed
+			// ! Due to lighting, the outlet spawns in the closed position. It then is opened every wave to ensure the correct state during the wave
+			if (i == this.STEP_OUTLET_C) {
+				if (element.type == this.TYPE_REGULAR || element.type == this.TYPE_INSTANT) {
+					isLakeOutletOpen = true;
+				}
+			}
+		}
+
+		// Plays the alarm every time the sequence is advanced regularly
+		if (hasRegularThisStep == true) {
+			this.triggerRelay("relay_dam_sequence_advance_this_wave")
+		}
+
+		// Ensure the lake outlet is open during waves
+		if (isLakeOutletOpen = true) {
+			this.triggerRelay("relay_dam_sequence_open_lake_outlet")
 		}
 
 		// Determine the current state of the sequence
-		local sequenceDone = this.currentSequenceStep >= this.maxSequenceSteps;
+		local sequenceDone = this.currentSequenceStep >= this.maxSequenceSteps - 1;
 		local sequenceInProgress = executions.len() != 0;
 		local hasAborted = this.abortedSequenceStep != -1;
 		local currentRelayName = "relay_dam_sequence_current_"
 
-		if (sequenceInProgress == false) {
-			currentRelayName = currentRelayName + "inactive"
-		} else if (sequenceDone) {
+		if (sequenceDone) {
 			currentRelayName = currentRelayName + "finished"
 		} else if (hasAborted) {
 			currentRelayName = currentRelayName + "aborted"
@@ -206,8 +227,13 @@ class DamSequence {
 
 		this.triggerRelay(currentRelayName)
 
+		// Call the abort relays
 		if (hasAborted == true) {
-			this.triggerRelay("relay_dam_sequence_has_aborted")
+			if (this.abortedThisWave) {
+				this.triggerRelay("relay_dam_sequence_abort_regular")
+			} else {
+				this.triggerRelay("relay_dam_sequence_abort_instant")
+			}
 		}
 
 		printl("----- --------------- -----")
@@ -493,6 +519,22 @@ function io_updateStartBranch() {
 
 function io_updateShortcutBranch() {
 	sequence.updateShortcutBranch()
+}
+
+function io_teleportTankAfterShortcut() {
+	printl("----- io_teleportTankAfterShortcut");
+	local pathEntity = Entities.FindByName(null, "path_lift_4");
+	local tankEntity = Entities.FindByName(null, "tankboss_shortcut");
+
+	if (tankEntity == null) {
+		printl("----- Shortcut tank has already been destroyed. Not teleporting");
+		return;
+	}
+
+	printl("----- Teleporting tank to end of shortcut");
+
+	local position = pathEntity.GetOrigin();
+	tankEntity.SetOrigin(position);
 }
 
 // ----- ----- ----- ----- -----
