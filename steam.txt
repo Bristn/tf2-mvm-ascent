@@ -1,7 +1,9 @@
-
 [img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/download.png[/img]
 
 Download the map and pop files on [url=https://github.com/Bristn/tf2-mvm-ascent/releases]GitHub[/url].
+
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/patH_main.gif[/img]
+[img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/gifs/path_water.gif[/img]
 
 [img]https://raw.githubusercontent.com/Bristn/tf2-mvm-ascent/refs/heads/master/doc/headers/renders/sequence.png[/img]
 

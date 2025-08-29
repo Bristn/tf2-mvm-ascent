@@ -1,9 +1,8 @@
 ## Changelog
 
-- Add detail to playable space
-- Add detail to 3d skybox
-- Remove first two sequence steps
-- Reduce teleport distance of tank after taking lift
+- Remove floating glow under lights
+- Include cubemaps in .bsp
+- Add gifs to readme
 
 ## How to install
 
@@ -13,4 +12,4 @@
   - Delete other versions of `mvm_ascent` in `Team Fortress 2/tf/maps`
   - Delete other pop files of `mvm_ascent` in `Team Fortress 2/scripts/population`
 - Paste the `tf` folder of the zip file into the `Team Fortress 2` folder
-- Start the map using the command `map mvm_ascent_a3`
+- Start the map using the command `map mvm_ascent`

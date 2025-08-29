@@ -1,5 +1,6 @@
 /vpk
 /internal 
+*.bsp
 
 # Blend backup
 *.blend1
@@ -11,4 +12,3 @@
 /*.log
 /*.vmx
 /*.prt
-/*.bsp

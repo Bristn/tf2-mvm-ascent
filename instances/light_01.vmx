@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "8870"
-	"mapversion" "14"
+	"mapversion" "42"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -14,7 +14,7 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "4"
+	"nGridSpacing" "8"
 }
 palette_plus
 {
@@ -89,7 +89,7 @@ bgimages_plus
 world
 {
 	"id" "1"
-	"mapversion" "14"
+	"mapversion" "42"
 	"classname" "worldspawn"
 	"detailmaterial" "detail/detailsprites_2fort"
 	"detailvbsp" "detail_2fort.vbsp"
@@ -99,21 +99,25 @@ world
 entity
 {
 	"id" "21"
-	"classname" "point_spotlight"
-	"angles" "90 0 0"
-	"disablereceiveshadows" "0"
-	"HDRColorScale" "1.0"
-	"IgnoreSolid" "0"
-	"maxdxlevel" "0"
-	"mindxlevel" "0"
-	"renderamt" "255"
-	"rendercolor" "252 255 215"
-	"renderfx" "26"
-	"rendermode" "9"
-	"spawnflags" "3"
-	"spotlightlength" "256"
-	"spotlightwidth" "50"
-	"origin" "0 -0.00787354 -52"
+	"classname" "light_spot"
+	"_cone" "45"
+	"_constant_attn" "0"
+	"_distance" "0"
+	"_exponent" "1"
+	"_fifty_percent_distance" "0"
+	"_hardfalloff" "0"
+	"_inner_cone" "30"
+	"_light" "252 255 215 750"
+	"_lightHDR" "-1 -1 -1 1"
+	"_lightscaleHDR" "1"
+	"_linear_attn" "0"
+	"_quadratic_attn" "1"
+	"_zero_percent_distance" "0"
+	"angles" "-90 0 0"
+	"pitch" "-90"
+	"spawnflags" "0"
+	"style" "0"
+	"origin" "0 -0.00787354 -40"
 	editor
 	{
 		"color" "220 30 220"
@@ -128,17 +132,17 @@ entity
 	"classname" "light"
 	"_constant_attn" "0"
 	"_distance" "0"
-	"_fifty_percent_distance" "192"
+	"_fifty_percent_distance" "200"
 	"_hardfalloff" "0"
 	"_light" "252 255 215 350"
 	"_lightHDR" "-1 -1 -1 1"
 	"_lightscaleHDR" "1"
 	"_linear_attn" "0"
 	"_quadratic_attn" "1"
-	"_zero_percent_distance" "576"
+	"_zero_percent_distance" "1500"
 	"spawnflags" "0"
 	"style" "0"
-	"origin" "-0.493225 -0.00787354 -88.0571"
+	"origin" "-0.493225 0 -84"
 	editor
 	{
 		"color" "220 30 220"
@@ -172,6 +176,32 @@ entity
 	editor
 	{
 		"color" "255 255 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "86"
+	"classname" "point_spotlight"
+	"angles" "90 0 0"
+	"disablereceiveshadows" "0"
+	"HDRColorScale" "1.0"
+	"IgnoreSolid" "0"
+	"maxdxlevel" "0"
+	"mindxlevel" "0"
+	"renderamt" "255"
+	"rendercolor" "252 255 215"
+	"renderfx" "26"
+	"rendermode" "9"
+	"spawnflags" "3"
+	"spotlightlength" "256"
+	"spotlightwidth" "50"
+	"origin" "0 0 -48"
+	editor
+	{
+		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"

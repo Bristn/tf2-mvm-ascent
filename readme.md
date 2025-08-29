@@ -2,6 +2,9 @@
 
 Checkout the map on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3532548365).
 
+![Main path](./doc/gifs/patH_main.gif)
+![Main path](./doc/gifs/patH_water.gif)
+
 ![Sequence Header](./doc/headers/renders/sequence.png)
 
 The layout of the map can be changed using the `InitWaveOutput` in the .pop files. The table shows the different relays and their actions.
