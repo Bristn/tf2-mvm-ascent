@@ -2,8 +2,8 @@
 
 Checkout the map on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3532548365).
 
-![Main path](./doc/gifs/patH_main.gif)
-![Main path](./doc/gifs/patH_water.gif)
+![Main path](./doc/gifs/path_main.gif)
+![Main path](./doc/gifs/path_water.gif)
 
 ![Sequence Header](./doc/headers/renders/sequence.png)
 
