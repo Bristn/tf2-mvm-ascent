@@ -1,6 +1,6 @@
 ![Workshop Header](./doc/headers/renders/workshop.png)
 
-Checkout the map on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3532548365).
+Checkout the map on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3569911379).
 
 ![Main path](./doc/gifs/path_main.gif)
 ![Main path](./doc/gifs/path_water.gif)
